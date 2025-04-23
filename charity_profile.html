@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HelpHub - Green Earth Initiative</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-flex">
+        <h1>HelpHub</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="charities.html">Charities</a>
+          <a href="charity_profile.html">Volunteer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Volunteer With HelpHub</h2>
+      <p>
+        Join us in our effort to make the world a better place for everyone.
+        Together, we can make our planet a better place!
+      </p>
+
+      <img src="image.png" alt="Our Call" class="charity-img" />
+
+      <h3>Sign Up to Volunteer</h3>
+      <form action="https://formspree.io/f/mkgjdngj" method="POST">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="interest">Area of Interest</label>
+        <select id="interest" name="interest">
+          <option value="shelter">Shelter Support</option>
+          <option value="food">Food Distribution</option>
+          <option value="rehab">Rehabilitation Support</option>
+          <option value="rehab">Habitat for Humanity</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+      <p id="thankYouMessage" style="display: none; color: green">
+        Thanks for signing up to volunteer!
+      </p>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 HelpHub. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const form = document.querySelector("form");
+      const thankYou = document.getElementById("thankYouMessage");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        fetch(form.action, {
+          method: "POST",
+          body: data,
+          headers: {
+            Accept: "application/json",
+          },
+        })
+          .then((response) => {
+            if (response.ok) {
+              thankYou.style.display = "block";
+              form.reset();
+            } else {
+              alert("Oops! Something went wrong.");
+            }
+          })
+          .catch((error) => {
+            alert("Oops! There was a problem.");
+          });
+      });
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

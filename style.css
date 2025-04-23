@@ -1,0 +1,162 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Use a readable font from Google Fonts */
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+
+/* Layout */
+header {
+  background-color: #2d6a4f;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header img {
+  width: 300px;
+  max-width: 100%;
+  height: auto;
+}
+
+nav {
+  background-color: #40916c;
+  padding: 10px;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main {
+  max-width: 960px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+footer {
+  background-color: #2d6a4f;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Buttons */
+button,
+input[type="submit"] {
+  background-color: #1b4332;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  background-color: #40916c;
+}
+
+/* Accessibility */
+a:focus,
+button:focus,
+input:focus {
+  outline: 2px solid #74c69d;
+  outline-offset: 2px;
+}
+
+/* Charity Profile Image */
+.charity-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+/* Volunteer Opportunities Section */
+.opportunity-section {
+  margin-top: 30px;
+}
+
+.opportunity-section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #2d6a4f;
+}
+
+/* Opportunity Cards */
+.opportunity-card {
+  background-color: #e9f7f1;
+  border: 1px solid #2d6a4f;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.opportunity-card h4 {
+  font-size: 1.5rem;
+  color: #2d6a4f;
+  margin-bottom: 10px;
+}
+
+.opportunity-card p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.opportunity-card .btn {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
+  background-color: #40916c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.opportunity-card .btn:hover {
+  background-color: #2d6a4f;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .opportunity-card {
+    padding: 15px;
+  }
+}
+
+#thankYouMessage {
+  font-size: 1.2rem;
+  margin-top: 15px;
+  color: #2d6a4f;
+}

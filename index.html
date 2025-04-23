@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HelpHub - Home</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container header-flex">
+        <h1>HelpHub</h1>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="charities.html">Charities</a>
+          <a href="charity_profile.html">Volunteer</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <h2>Welcome to HelpHub</h2>
+      <p>
+        Join us in supporting local charities and volunteering for causes that
+        matter.
+      </p>
+      <img src="homepagepic.webp" alt="The Impact" class="charity-img" />
+      <section id="volunteerStories" class="section">
+        <div class="container">
+          <h2>Stories About Us</h2>
+          <div id="storiesContainer" class="opportunity-grid"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 HelpHub. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const stories = [
+        {
+          title: "John's Story",
+          description:
+            "I have came accross the HelpHub website not long ago, and I love how they always help me find volunteering opportunities. I really love volunteering.",
+        },
+        {
+          title: "Diana's Story",
+          description:
+            "It is very nice knowing about this website. I am high school senior who's into volunteering, and I am always looking for opportunities to help out. I love how HelpHub has so many options.",
+        },
+        {
+          title: "Franklin's Story",
+          description:
+            "I have been using HelpHub for a while now, and I am very happy with the opportunities I have found. I love how they always keep me updated with new opportunities.",
+        },
+      ];
+
+      const storiesContainer = document.getElementById("storiesContainer");
+
+      stories.forEach((story) => {
+        const storyCard = document.createElement("div");
+        storyCard.className = "opportunity-card";
+        storyCard.innerHTML = `
+          <h4>${story.title}</h4>
+          <p>${story.description}</p>
+        `;
+        storiesContainer.appendChild(storyCard);
+      });
+    </script>
+  </body>
+</html>
